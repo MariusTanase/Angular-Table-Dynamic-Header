@@ -1,0 +1,18 @@
+<div class="table-container">
+  <h2>Route A: Dynamic Header Based on 25% Text Threshold</h2>
+
+  <p-table [value]="tableData" class="custom-table">
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let col of cols">{{ col.header }}</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-row>
+      <tr>
+        <td *ngFor="let col of cols">
+          {{ row[col.field] }}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
